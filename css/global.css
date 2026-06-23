@@ -1,0 +1,14 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    min-height: 100vh;
+}
+
+.escondido {
+    display: none !important;
+}
