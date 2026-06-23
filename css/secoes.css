@@ -1,0 +1,469 @@
+/* ===== BASE DE TODAS AS SEÇÕES ===== */
+.secao {
+    max-width: 1100px;
+    margin: 48px auto;
+    padding: 0 32px;
+}
+
+.secao h2 {
+    font-size: 1.8rem;
+    color: var(--cor-primaria-escura);
+    margin-bottom: 28px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid var(--cor-primaria);
+    text-align: center;
+}
+
+
+/* ===== TREINOS ===== */
+#lista-treinos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.card-treino {
+    background-color: var(--cor-fundo-card);
+    border-radius: var(--raio-borda);
+    box-shadow: var(--sombra-card);
+    padding: 20px;
+}
+
+.card-treino h3 {
+    color: var(--cor-primaria-escura);
+    margin-bottom: 8px;
+}
+
+.card-treino p {
+    color: var(--cor-texto-suave);
+    line-height: 1.6;
+}
+
+
+/* ===== ALIMENTAÇÃO ===== */
+.alim-conteudo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    align-items: start;
+}
+
+.card-dica {
+    background-color: var(--cor-fundo-card);
+    border-radius: var(--raio-borda);
+    box-shadow: var(--sombra-card);
+    padding: 20px;
+    border-left: 4px solid var(--cor-primaria);
+}
+
+.card-dica h3 {
+    color: var(--cor-primaria-escura);
+    margin-bottom: 8px;
+}
+
+.card-dica p {
+    color: var(--cor-texto-suave);
+    line-height: 1.6;
+}
+
+
+.card-historia {
+    margin-top: 32px;
+}
+
+
+/* ===== MOTIVAÇÃO ===== */
+.feed {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.post {
+    background-color: var(--cor-fundo-card);
+    border-radius: var(--raio-borda);
+    box-shadow: var(--sombra-card);
+    padding: 20px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.post-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: var(--cor-primaria);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.post-autor {
+    font-weight: bold;
+    color: var(--cor-texto);
+}
+
+.post-data {
+    font-size: 0.8rem;
+    color: var(--cor-texto-suave);
+}
+
+.post-conteudo {
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+
+/* ===== TREINOS — SELETOR DE OBJETIVO ===== */
+#objetivo-selector,
+#genero-selector,
+#frequencia-selector {
+    background-color: var(--cor-fundo-card);
+    border-radius: var(--raio-borda);
+    box-shadow: var(--sombra-card);
+    padding: 40px 32px;
+    text-align: center;
+}
+
+.secao-subtitulo {
+    color: var(--cor-texto-suave);
+    margin-bottom: 24px;
+    font-size: 1.05rem;
+    text-align: center;
+}
+
+.objetivo-botoes {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-objetivo {
+    padding: 16px 32px;
+    background-color: white;
+    border: 2px solid var(--cor-primaria);
+    border-radius: var(--raio-borda);
+    color: var(--cor-primaria-escura);
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.btn-objetivo:hover,
+.btn-objetivo.ativo {
+    background-color: var(--cor-primaria);
+    color: white;
+}
+
+/* ===== TREINOS — NÍVEIS ===== */
+.treinos-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+#btn-trocar-objetivo,
+#btn-voltar-objetivo-massa,
+#btn-voltar-para-genero {
+    padding: 8px 14px;
+    border: 2px solid var(--cor-primaria);
+    border-radius: var(--raio-borda);
+    color: var(--cor-primaria);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#btn-trocar-objetivo:hover,
+#btn-voltar-objetivo-massa:hover,
+#btn-voltar-para-genero:hover {
+    background-color: var(--cor-primaria);
+    color: white;
+}
+
+.btn-frequencia {
+    padding: 16px 28px;
+    background-color: var(--cor-fundo-card);
+    border: 2px solid var(--cor-primaria);
+    border-radius: var(--raio-borda);
+    color: var(--cor-primaria-escura);
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.btn-frequencia:hover,
+.btn-frequencia.ativo {
+    background-color: var(--cor-primaria);
+    color: white;
+}
+
+.btn-genero {
+    padding: 16px 36px;
+    background-color: var(--cor-fundo-card);
+    border: 2px solid var(--cor-primaria);
+    border-radius: var(--raio-borda);
+    color: var(--cor-primaria-escura);
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.btn-genero:hover,
+.btn-genero.ativo {
+    background-color: var(--cor-primaria);
+    color: white;
+}
+
+#objetivo-selecionado {
+    font-weight: bold;
+    color: var(--cor-primaria-escura);
+    font-size: 1.05rem;
+}
+
+.nivel-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    justify-content: center;
+}
+
+.btn-nivel {
+    padding: 10px 24px;
+    border-radius: var(--raio-borda);
+    border: 2px solid #E0D6F0;
+    background-color: var(--cor-fundo-card);
+    color: var(--cor-texto-suave);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-nivel:hover,
+.btn-nivel.ativo {
+    background-color: var(--cor-primaria);
+    border-color: var(--cor-primaria);
+    color: white;
+}
+
+/* ===== ALIMENTAÇÃO — ABAS ===== */
+.alim-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    justify-content: center;
+}
+
+.btn-alim {
+    padding: 10px 24px;
+    border-radius: var(--raio-borda);
+    border: 2px solid #E0D6F0;
+    background-color: var(--cor-fundo-card);
+    color: var(--cor-texto-suave);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-alim:hover,
+.btn-alim.ativo {
+    background-color: var(--cor-primaria);
+    border-color: var(--cor-primaria);
+    color: white;
+}
+
+/* ===== MOTIVAÇÃO — ANTES E DEPOIS ===== */
+.antes-depois {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.foto-transformacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.foto-transformacao img {
+    width: 280px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: var(--raio-borda);
+    box-shadow: var(--sombra-card);
+    border: 3px solid var(--cor-primaria);
+}
+
+.foto-label {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+/* ===== GALERIA DE ALIMENTOS ===== */
+.galeria-titulo {
+    color: var(--cor-primaria-escura);
+    margin: 32px 0 16px;
+    font-size: 1.2rem;
+    grid-column: 1 / -1;
+}
+
+.galeria-alimentos {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    grid-column: 1 / -1;
+}
+
+.card-alimento {
+    background-color: var(--cor-fundo-card);
+    border-radius: var(--raio-borda);
+    box-shadow: var(--sombra-card);
+    overflow: hidden;
+    width: 200px;
+    text-align: center;
+}
+
+.card-alimento img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.card-alimento p {
+    padding: 10px;
+    color: var(--cor-texto-suave);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* ===== TREINOS — DIA DE TREINO (MASSA) ===== */
+.card-dia {
+    background-color: var(--cor-primaria);
+    border-radius: var(--raio-borda);
+    padding: 14px 20px;
+    margin: 24px 0 12px;
+}
+
+.card-dia h3 {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#divisao-info {
+    font-size: 0.85rem;
+    color: var(--cor-texto-suave);
+    margin-top: 2px;
+}
+
+.objetivo-titulo-massa {
+    font-weight: bold;
+    color: var(--cor-primaria-escura);
+    font-size: 1.05rem;
+}
+
+
+/* ===== ASSISTENTE ===== */
+.assistente-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.assistente-apresentacao {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--cor-fundo-card);
+    border-radius: var(--raio-borda);
+    box-shadow: var(--sombra-card);
+    padding: 24px;
+}
+
+.assistente-foto {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--cor-primaria);
+    flex-shrink: 0;
+}
+
+.assistente-nome {
+    font-weight: bold;
+    color: var(--cor-primaria-escura);
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+
+.assistente-descricao {
+    color: var(--cor-texto-suave);
+    line-height: 1.6;
+}
+
+.assistente-link-container {
+    background-color: var(--cor-fundo-card);
+    border-radius: var(--raio-borda);
+    box-shadow: var(--sombra-card);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.assistente-label {
+    color: var(--cor-texto-suave);
+    font-size: 0.95rem;
+}
+
+.assistente-input {
+    padding: 12px 16px;
+    border: 2px solid #E0D6F0;
+    border-radius: var(--raio-borda);
+    font-size: 0.95rem;
+    color: var(--cor-texto);
+    outline: none;
+    transition: border-color 0.3s;
+    font-family: var(--fonte-principal);
+}
+
+.assistente-input:focus {
+    border-color: var(--cor-primaria);
+}
+
+#btn-acessar-bot {
+    padding: 12px 24px;
+    background-color: var(--cor-primaria);
+    color: white;
+    border-radius: var(--raio-borda);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: flex-start;
+}
+
+#btn-acessar-bot:hover {
+    background-color: var(--cor-primaria-escura);
+}
