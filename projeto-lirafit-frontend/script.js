@@ -387,14 +387,17 @@ btnsAlim.forEach(function(btn) {
 
 
 // Botão LiraBot
-document.getElementById('btn-acessar-bot').addEventListener('click', function() {
-    const url = document.getElementById('input-link-bot').value.trim();
-    if (url) {
-        window.open(url, '_blank');
-    } else {
-        alert('Cole o link do LiraBot antes de acessar.');
-    }
-});
+const btnAcessarBot = document.getElementById('btn-acessar-bot');
+if (btnAcessarBot) {
+    btnAcessarBot.addEventListener('click', function() {
+        const url = document.getElementById('input-link-bot').value.trim();
+        if (url) {
+            window.open(url, '_blank');
+        } else {
+            alert('Cole o link do LiraBot antes de acessar.');
+        }
+    });
+}
 
 
 // Botão "← Início"
@@ -453,3 +456,61 @@ window.addEventListener('scroll', function() {
 btnTopo.addEventListener('click', function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+
+// ===== SEÇÃO CÓDIGO JAVA (showcase) =====
+
+// Objeto (chave: valor) guardando o código de cada arquivo
+const cjTrechosDeCodigo = {
+    "Treinavel.java": `public interface Treinavel {
+    void iniciarTreino();
+    void finalizarTreino();
+    double calcularCaloriasGastas();
+}`,
+
+    "Treino.java": `public abstract class Treino implements Treinavel {
+
+    private String nome;
+    private int duracaoMinutos;
+    private NivelIntensidade intensidade;
+
+    @Override
+    public abstract double calcularCaloriasGastas();
+}`,
+
+    "TreinoForca.java": `public class TreinoForca extends Treino {
+
+    @Override
+    public double calcularCaloriasGastas() {
+        return (getDuracaoMinutos() * getIntensidade().getFatorCalorico())
+                + (cargaTotalKg * 0.05);
+    }
+}`
+};
+
+const cjBotoesAba = document.querySelectorAll('.cj-aba');
+const cjElementoCodigo = document.getElementById('cj-codigo-exibido');
+const cjElementoNomeArquivo = document.getElementById('cj-nome-arquivo-atual');
+
+function cjMostrarCodigo(nomeArquivo) {
+    cjElementoCodigo.textContent = cjTrechosDeCodigo[nomeArquivo];
+    cjElementoNomeArquivo.textContent = nomeArquivo;
+
+    cjBotoesAba.forEach(function(botao) {
+        botao.classList.remove('cj-ativa');
+        if (botao.getAttribute('data-arquivo') === nomeArquivo) {
+            botao.classList.add('cj-ativa');
+        }
+    });
+}
+
+cjBotoesAba.forEach(function(botao) {
+    botao.addEventListener('click', function() {
+        cjMostrarCodigo(botao.getAttribute('data-arquivo'));
+    });
+});
+
+// Mostra o primeiro arquivo assim que a página carrega
+if (cjElementoCodigo) {
+    cjMostrarCodigo('Treinavel.java');
+}

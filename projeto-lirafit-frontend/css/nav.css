@@ -54,21 +54,32 @@
 }
 
 #btn-inicio {
-    padding: 6px 4px;
-    background: none;
+    padding: 8px 16px 8px 12px;
+    background-color: var(--cor-fundo);
     border: none;
-    color: var(--cor-texto-suave);
+    border-radius: 999px;
+    color: var(--cor-primaria-escura);
     font-size: 0.85rem;
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
-    transition: color 0.2s;
+    transition: background-color 0.2s, transform 0.2s;
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 6px;
+}
+
+#btn-inicio .seta {
+    display: inline-block;
+    transition: transform 0.2s;
 }
 
 #btn-inicio:hover {
-    color: var(--cor-primaria);
+    background-color: var(--cor-primaria);
+    color: white;
+}
+
+#btn-inicio:hover .seta {
+    transform: translateX(-3px);
 }
 
 #btn-sair {

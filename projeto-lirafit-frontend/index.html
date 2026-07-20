@@ -13,26 +13,28 @@
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/secoes.css">
     <link rel="stylesheet" href="css/footer.css">
-
+    <link rel="stylesheet" href="css/backend.css">
 </head>
 <body>
+
+    <!-- ===== TELA DE APRESENTAÇÃO ===== -->
     <div id="tela-apresentacao">
-    <img src="assets/favicon.svg" alt="Logo Lira Fit" class="logo-apresentacao">
-    <img src="assets/minha-foto.jpeg" alt="Foto de Thays Lira" class="foto-perfil">
-    <h1> Olá, eu sou a Thays Lira!  </h1>
-    <p class="apresentacao-descricao">
-    Sou estudante de Análise e Desenvolvimento de Sistemas e criei o <strong>Lira Fit</strong> para praticar meus conhecimentos em Programação (Front end, Pyhton, Database, Java e IA.)</p>
-    <p class="apresentacao-descricao">
-        O Lira Fit é um site de saúde e bem-estar onde você acompanha dicas de
-        treinos e alimentação.
-    </p>
-    <button id="btn-acessar">Acessar o site</button>
-</div>
+        <img src="assets/favicon.svg" alt="Logo Lira Fit" class="logo-apresentacao">
+        <img src="assets/minha-foto.jpeg" alt="Foto de Thays Lira" class="foto-perfil">
+        <h1>Olá, eu sou a Thays Lira!</h1>
+        <p class="apresentacao-descricao">
+            Sou estudante de Análise e Desenvolvimento de Sistemas e criei o <strong>Lira Fit</strong> para praticar meus conhecimentos em Programação (Front end, Python, Database, Java e IA).</p>
+        <p class="apresentacao-descricao">
+            O Lira Fit é um site de saúde e bem-estar onde você acompanha dicas de treinos e alimentação.
+        </p>
+        <button id="btn-acessar">Acessar o site</button>
+    </div>
+
     <!-- ===== TELA DE LOGIN ===== -->
     <div id="tela-login" class="escondido">
         <div class="login-container">
             <img src="assets/favicon.svg" alt="Logo Lira Fit" class="logo-form">
-            <h1>Lira Fit </h1>
+            <h1>Lira Fit</h1>
             <p>Seu espaço de saúde e bem-estar</p>
 
             <form id="form-login">
@@ -46,12 +48,11 @@
         </div>
     </div>
 
-
     <!-- ===== TELA DE CADASTRO ===== -->
     <div id="tela-cadastro" class="escondido">
         <div class="login-container">
             <img src="assets/favicon.svg" alt="Logo Lira Fit" class="logo-form">
-            <h1>Criar conta </h1>
+            <h1>Criar conta</h1>
             <p>Preencha os dados para se cadastrar</p>
 
             <form id="form-cadastro">
@@ -63,19 +64,18 @@
             </form>
 
             <p id="msg-erro-cadastro" class="escondido"></p>
-            <p id="msg-sucesso-cadastro" class="escondido">Conta criada! Faça login. </p>
+            <p id="msg-sucesso-cadastro" class="escondido">Conta criada! Faça login.</p>
 
             <p class="link-cadastro">Já tem conta? <a href="#" id="link-ir-login">Entrar</a></p>
         </div>
     </div>
-
 
     <!-- ===== APP PRINCIPAL ===== -->
     <div id="app" class="escondido">
 
         <nav id="navbar">
             <div class="nav-esquerda">
-                <button id="btn-inicio">← Início</button>
+                <button id="btn-inicio"><span class="seta">←</span> Início</button>
                 <div class="nav-marca">
                     <img src="assets/favicon.svg" alt="Logo Lira Fit" class="logo-nav">
                     <span class="logo-nav-texto">Lira Fit</span>
@@ -86,6 +86,7 @@
                 <li><a href="#" data-secao="alimentacao">Alimentação</a></li>
                 <li><a href="#" data-secao="motivacao">Motivação</a></li>
                 <li><a href="#" data-secao="assistente">Assistente</a></li>
+                <li><a href="#" data-secao="codigo-java">Código Java</a></li>
                 <li class="nav-item-mobile"><button id="btn-sair-mobile">Sair</button></li>
             </ul>
             <button id="btn-sair">Sair</button>
@@ -96,15 +97,16 @@
             </button>
         </nav>
 
+        <!-- ===== SEÇÃO TREINOS ===== -->
         <section id="treinos" class="secao">
             <h2>Meus Treinos</h2>
 
             <div id="objetivo-selector">
                 <p class="secao-subtitulo">Qual é o seu objetivo?</p>
                 <div class="objetivo-botoes">
-                    <button class="btn-objetivo" data-objetivo="emagrecer"> Emagrecer</button>
-                    <button class="btn-objetivo" data-objetivo="massa"> Ganhar Massa</button>
-                    <button class="btn-objetivo" data-objetivo="condicionamento"> Condicionamento</button>
+                    <button class="btn-objetivo" data-objetivo="emagrecer">Emagrecer</button>
+                    <button class="btn-objetivo" data-objetivo="massa">Ganhar Massa</button>
+                    <button class="btn-objetivo" data-objetivo="condicionamento">Condicionamento</button>
                 </div>
             </div>
 
@@ -155,12 +157,13 @@
             </div>
         </section>
 
+        <!-- ===== SEÇÃO ALIMENTAÇÃO ===== -->
         <section id="alimentacao" class="secao escondido">
             <h2>Dicas de Alimentação</h2>
 
             <div class="alim-tabs">
-                <button class="btn-alim ativo" data-alim="emagrecer"> Emagrecimento</button>
-                <button class="btn-alim" data-alim="massa"> Ganho de Massa</button>
+                <button class="btn-alim ativo" data-alim="emagrecer">Emagrecimento</button>
+                <button class="btn-alim" data-alim="massa">Ganho de Massa</button>
             </div>
 
             <div id="alim-emagrecer" class="alim-conteudo">
@@ -185,7 +188,7 @@
                     <p>Biscoitos recheados, refrigerantes e salgadinhos são ricos em calorias vazias. Substitua por frutas, castanhas e iogurte natural.</p>
                 </div>
 
-                <h3 class="galeria-titulo">Meus exemplos reais </h3>
+                <h3 class="galeria-titulo">Meus exemplos reais</h3>
                 <div class="galeria-alimentos">
                     <div class="card-alimento">
                         <img src="assets/frutas.jpg" alt="Frutas variadas">
@@ -216,7 +219,7 @@
                     <p>Para ganhar massa é preciso comer de 4 a 6 vezes ao dia. Jejuar por longos períodos pode levar o corpo a usar músculo como energia.</p>
                 </div>
 
-                <h3 class="galeria-titulo">Meus exemplos reais </h3>
+                <h3 class="galeria-titulo">Meus exemplos reais</h3>
                 <div class="galeria-alimentos">
                     <div class="card-alimento">
                         <img src="assets/frangos.jpg" alt="Frango grelhado">
@@ -234,9 +237,10 @@
             </div>
         </section>
 
+        <!-- ===== SEÇÃO MOTIVAÇÃO ===== -->
         <section id="motivacao" class="secao escondido">
             <h2>Motivação</h2>
-            <p class="secao-subtitulo">Minha jornada de transformação </p>
+            <p class="secao-subtitulo">Minha jornada de transformação</p>
 
             <div class="antes-depois">
                 <div class="foto-transformacao">
@@ -261,13 +265,14 @@
             </div>
 
             <div class="card-treino card-historia">
-                <h3>Minha história </h3>
-                <p>Aos 17 anos, eu decidi que queria mudar. Com 1,70m e pesando 63 kg, me sentia muito mal: autoestima baixa, nenhuma roupa ficava do jeito que eu queria, não me alimentava direito e era sedentária.</p>
-                <p>Com essa decisão veio um grande desafio: me matricular numa academia. Tinha vergonha, não sabia nem ligar a esteira e era tímida demais para pedir ajuda. Mas eu persisti. Assistia vídeos de como executar os exercícios, estudava treinos, pesquisava e fui me informando. Fui indo dia após dia, mesmo com a frustração de não ver mudanças imediatas. Passaram-se meses até eu conseguir ganhar peso.</p>
-                <p>Mas eu consegui. 10 kg a mais fizeram toda a diferença para mim. Encontrei amor na musculação e hoje não vivo sem ela. Quero passar essa mensagem: praticar exercícios físicos salva e muda vidas! Vamos escrever a sua trajetória juntos? </p>
+                <h3>Minha história</h3>
+                <p>Aos 17 anos, eu decidi que queria mudar. Autoestima baixa, nenhuma roupa ficava do jeito que eu queria, não me alimentava direito e era sedentária.</p>
+                <p>Com essa decisão veio um grande desafio: me matricular numa academia. Era tímida demais para pedir ajuda. Mas eu persisti. Assistia vídeos de como executar os exercícios, estudava treinos, pesquisava e fui me informando. Fui indo dia após dia, mesmo com a frustração de não ver mudanças imediatas. Passaram-se meses até eu conseguir ganhar peso.</p>
+                <p>Mas eu consegui. 10 kg a mais fizeram toda a diferença para mim. Encontrei amor na musculação e hoje não vivo sem ela. Quero passar essa mensagem: praticar exercícios físicos salva e muda vidas! Vamos escrever a sua trajetória juntos?</p>
             </div>
         </section>
 
+        <!-- ===== SEÇÃO ASSISTENTE (INTEGRADA COM APY PYTHON) ===== -->
         <section id="assistente" class="secao escondido">
             <h2>Assistente Virtual</h2>
 
@@ -276,16 +281,39 @@
                     <img src="assets/lirabot.svg" alt="LiraBot" class="assistente-foto">
                     <div>
                         <p class="assistente-nome">LiraBot</p>
-                        <p class="assistente-descricao">Olá! Sou o LiraBot, assistente virtual da Thays. Tire suas dúvidas sobre treino e alimentação!</p>
+                        <p class="assistente-descricao">Olá! Sou o LiraBot, assistente do Lira Fit. Peça dados e dicas atualizadas clicando no icone azul no canto inferior abaixo!</p>
                     </div>
                 </div>
 
-                <div class="assistente-link-container">
-                    <label for="input-link-bot" class="assistente-label">link do LiraBot :</label>
-                    <input type="url" id="input-link-bot" placeholder="https://..." class="assistente-input">
-                    <button id="btn-acessar-bot">Acessar o LiraBot</button>
-                </div>
+            
+                <div id="watson-chat-container"></div>
             </div>
+        </section>
+
+        <!-- ===== SEÇÃO CÓDIGO JAVA ===== -->
+        <section id="codigo-java" class="secao escondido">
+            <h2>Por trás do código</h2>
+            <p class="secao-subtitulo">A versão em Java (POO) do Lira Fit</p>
+
+            <div class="cj-abas">
+                <button class="cj-aba cj-ativa" data-arquivo="Treinavel.java">Treinavel.java</button>
+                <button class="cj-aba" data-arquivo="Treino.java">Treino.java</button>
+                <button class="cj-aba" data-arquivo="TreinoForca.java">TreinoForca.java</button>
+            </div>
+
+            <div class="cj-editor">
+                <div class="cj-editor-barra">
+                    <span class="cj-bolinha cj-vermelha"></span>
+                    <span class="cj-bolinha cj-amarela"></span>
+                    <span class="cj-bolinha cj-verde"></span>
+                    <span class="cj-nome-arquivo" id="cj-nome-arquivo-atual">Treinavel.java</span>
+                </div>
+                <pre><code id="cj-codigo-exibido"></code></pre>
+            </div>
+
+            <a href="https://github.com/thaylira2026-hub/projeto-pessoal-lirafit/tree/master/projeto-lirafit-java" target="_blank" rel="noopener noreferrer" class="cj-botao-github">
+                Ver código completo no GitHub →
+            </a>
         </section>
 
         <!-- ===== BOTÃO VOLTAR AO TOPO ===== -->
@@ -313,5 +341,19 @@
     <script src="dados-massa.js"></script>
     <script src="script.js"></script>
 
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "4baf8be1-6d2c-46f7-bf72-d570dea1bd47", 
+        region: "https://integrations.au-syd.assistant.watson.appdomain.cloud", 
+        serviceInstanceID: "c79fa574-4c94-4674-b092-19c3aefbde6c", 
+        element: document.getElementById('watson-chat-container'), 
+        onLoad: async (instance) => { await instance.render(); }
+      };
+      setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+      });
+    </script>
 </body>
 </html>
