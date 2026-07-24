@@ -18,17 +18,63 @@
 <body>
 
     <!-- ===== TELA DE APRESENTAÇÃO ===== -->
-    <div id="tela-apresentacao">
-        <img src="assets/favicon.svg" alt="Logo Lira Fit" class="logo-apresentacao">
-        <img src="assets/minha-foto.jpeg" alt="Foto de Thays Lira" class="foto-perfil">
-        <h1>Olá, eu sou a Thays Lira!</h1>
-        <p class="apresentacao-descricao">
-            Sou estudante de Análise e Desenvolvimento de Sistemas e criei o <strong>Lira Fit</strong> para praticar meus conhecimentos em Programação (Front end, Python, Database, Java e IA).</p>
-        <p class="apresentacao-descricao">
-            O Lira Fit é um site de saúde e bem-estar onde você acompanha dicas de treinos e alimentação.
-        </p>
-        <button id="btn-acessar">Acessar o site</button>
+<div id="tela-apresentacao">
+
+    <img src="assets/favicon.svg" alt="Logo Lira Fit" class="logo-apresentacao">
+
+    <h1>Lira Fit</h1>
+
+    <p class="apresentacao-descricao">
+        Seu parceiro para uma vida mais saudável.
+    </p>
+
+    <div class="features">
+
+        <div class="feature-card">
+            <div class="feature-icone">💪</div>
+            <h3>Treinos</h3>
+            <p>Exercícios para todos os objetivos.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icone">🥗</div>
+            <h3>Alimentação</h3>
+            <p>Dicas para emagrecer e ganhar massa.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icone">❤️</div>
+            <h3>Saúde</h3>
+            <p>Hábitos para uma rotina equilibrada.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icone">🤖</div>
+            <h3>LiraBot</h3>
+            <p>Assistente virtual para tirar dúvidas.</p>
+        </div>
+
     </div>
+
+    <button id="btn-acessar">Acessar o site</button>
+
+    <div class="autor-projeto">
+
+        <h2>Projeto desenvolvido por Thays Lira</h2>
+
+        <p>
+            Estudante de Análise e Desenvolvimento de Sistemas.
+        </p>
+
+        <p class="descricao-projeto">
+            Este projeto foi desenvolvido para praticar HTML, CSS, JavaScript,
+            Java, Python e Banco de Dados, aplicando conceitos aprendidos durante
+            a graduação através de um sistema fitness completo.
+        </p>
+
+    </div>
+
+</div>
 
     <!-- ===== TELA DE LOGIN ===== -->
     <div id="tela-login" class="escondido">
@@ -166,6 +212,7 @@
                 <button class="btn-alim" data-alim="massa">Ganho de Massa</button>
             </div>
 
+            <!-- TAB EMAGRECIMENTO -->
             <div id="alim-emagrecer" class="alim-conteudo">
                 <div class="card-dica">
                     <h3>Déficit calórico</h3>
@@ -189,14 +236,30 @@
                 </div>
 
                 <h3 class="galeria-titulo">Meus exemplos reais</h3>
-                <div class="galeria-alimentos">
-                    <div class="card-alimento">
-                        <img src="assets/frutas.jpg" alt="Frutas variadas">
-                        <p>Frutas</p>
-                    </div>
-                </div>
-            </div>
 
+<div class="galeria-alimentos">
+
+    <div class="card-alimento">
+        <img src="assets/frutas.jpg" alt="Frutas na marmita">
+    </div>
+
+    <div class="card-alimento">
+        <img src="assets/emagrecer1.jpg" alt="Comida pesada na balança">
+    </div>
+
+    <div class="card-alimento">
+        <img src="assets/frutasleves.jpg" alt="Frutas leves">
+    </div>
+
+    <div class="card-alimento">
+        <img src="assets/cafedamanha.jpg" alt="Café da manhã">
+    </div>
+
+</div>
+            </div>
+            
+
+            <!-- TAB GANHO DE MASSA -->
             <div id="alim-massa" class="alim-conteudo escondido">
                 <div class="card-dica">
                     <h3>Superávit calórico</h3>
@@ -285,7 +348,6 @@
                     </div>
                 </div>
 
-            
                 <div id="watson-chat-container"></div>
             </div>
         </section>
