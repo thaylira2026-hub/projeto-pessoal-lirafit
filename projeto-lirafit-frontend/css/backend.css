@@ -1,7 +1,8 @@
 /* ===== SEÇÃO CÓDIGO JAVA ===== */
 
 #codigo-java {
-    max-width: 800px;
+    max-width: 1000px;
+    width: 92%;
     margin: 0 auto;
 }
 
@@ -39,6 +40,7 @@
     font-weight: 600;
 }
 
+/* ---- Editor de Código ---- */
 
 .cj-editor {
     border-radius: var(--raio-borda);
@@ -86,13 +88,16 @@
     font-size: 0.9rem;
     line-height: 1.6;
     color: #D4D4E0;
-    white-space: pre;
+    white-space: pre-wrap; 
+    word-break: break-word;
 }
 
 /* ---- Botão para o repositório no GitHub ---- */
 
 .cj-botao-github {
-    display: inline-block;
+    display: block;            
+    width: fit-content;        
+    margin: 0 auto;            
     font-family: var(--fonte-principal);
     font-size: 0.95rem;
     font-weight: 600;
@@ -124,5 +129,10 @@
 
     .cj-editor code {
         font-size: 0.8rem;
+    }
+
+    .cj-botao-github {
+        width: 100%;           
+        text-align: center;
     }
 }

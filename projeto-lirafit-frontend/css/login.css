@@ -1,16 +1,179 @@
-/* ===== TELA DE APRESENTAÇÃO ===== */
-#tela-apresentacao {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
+/* ===========================
+   TELA DE APRESENTAÇÃO
+=========================== */
+
+#tela-apresentacao{
+    min-height:100vh;
+    background:var(--cor-fundo);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.logo-apresentacao{
+    width:90px;
+    margin-bottom:25px;
+}
+
+#tela-apresentacao h1{
+    font-size:3rem;
+    color:var(--cor-primaria-escura);
+    margin-bottom:10px;
+}
+
+.apresentacao-descricao{
+    max-width:700px;
+    font-size:1.1rem;
+    color:#666;
+    line-height:1.8;
+    margin-bottom:40px;
+}
+
+/* ===========================
+   CARDS
+=========================== */
+
+.features{
+    display:flex;
+    justify-content:center;
+    gap:24px;
+    flex-wrap:wrap;
+    margin-bottom:50px;
+}
+
+.feature-card{
+    width:210px;
+    background:#fff;
+    padding:28px 20px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.feature-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.feature-icone{
+    font-size:2rem;
+    margin-bottom:12px;
+}
+
+.feature-card h3{
+    color:var(--cor-primaria);
+    margin-bottom:10px;
+    font-size:1.2rem;
+}
+
+.feature-card p{
+    color:#666;
+    font-size:.95rem;
+    line-height:1.6;
+}
+
+/* ===========================
+   BOTÃO
+=========================== */
+
+#btn-acessar{
+    margin:10px 0 60px;
+    padding:16px 42px;
+    border:none;
+    border-radius:999px;
+    background:var(--cor-primaria);
+    color:#fff;
+    font-size:1rem;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#btn-acessar:hover{
+    transform:translateY(-4px);
+    background:var(--cor-primaria-escura);
+    box-shadow:0 15px 35px rgba(138,92,246,.35);
+}
+
+/* ===========================
+   AUTORA
+=========================== */
+
+.autor-projeto{
+    max-width:800px;
+    text-align:center;
+}
+
+.foto-perfil{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid var(--cor-primaria);
+    margin-bottom:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.autor-projeto h2{
+    font-size:2rem;
+    color:var(--cor-primaria-escura);
+    margin-bottom:10px;
+}
+
+.autor-projeto p{
+    color:#666;
+    line-height:1.8;
+    font-size:1rem;
+}
+
+.descricao-projeto{
+    margin-top:15px;
+    max-width:700px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+
+@media(max-width:768px){
+
+    #tela-apresentacao h1{
+        font-size:2.2rem;
+    }
+
+    .apresentacao-descricao{
+        font-size:1rem;
+    }
+
+    .features{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .feature-card{
+        width:100%;
+        max-width:320px;
+    }
+
+    .foto-perfil{
+        width:110px;
+        height:110px;
+    }
+
+    .autor-projeto h2{
+        font-size:1.6rem;
+    }
+
 }
 
 .apresentacao-container {
     text-align: center;
-    max-width: 500px;
+    max-width: 1000px;
 }
 
 .logo-apresentacao {
@@ -72,7 +235,7 @@
     padding: 40px;
     border-radius: var(--raio-borda);
     box-shadow: var(--sombra-card);
-    width: 100%;
+    width: 1000%;
     max-width: 400px;
     text-align: center;
 }
