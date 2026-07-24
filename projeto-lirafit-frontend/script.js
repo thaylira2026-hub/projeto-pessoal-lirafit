@@ -160,7 +160,7 @@ linksNav.forEach(function(link) {
 });
 
 
-// Treinos — dados e lógica
+// Treinos / dados e lógica
 const dadosTreinos = {
     emagrecer: {
         label: ' Emagrecer',
@@ -385,7 +385,7 @@ btnsAlim.forEach(function(btn) {
 });
 
 
-// Botão LiraBot
+// LiraBot
 const btnAcessarBot = document.getElementById('btn-acessar-bot');
 if (btnAcessarBot) {
     btnAcessarBot.addEventListener('click', function() {
