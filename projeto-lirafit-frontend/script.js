@@ -88,7 +88,6 @@ formCadastro.addEventListener('submit', function(evento) {
         return;
     }
 
-    // Pega os usuários já salvos no localStorage (ou array vazio se não houver)
     const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
     // Verifica se o e-mail já está cadastrado
@@ -460,7 +459,6 @@ btnTopo.addEventListener('click', function() {
 
 // ===== SEÇÃO CÓDIGO JAVA  =====
 
-// Objeto (chave: valor) guardando o código de cada arquivo
 const cjTrechosDeCodigo = {
     "Treinavel.java": `public interface Treinavel {
     void iniciarTreino();
