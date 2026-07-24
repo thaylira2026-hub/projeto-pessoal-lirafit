@@ -458,7 +458,7 @@ btnTopo.addEventListener('click', function() {
 });
 
 
-// ===== SEÇÃO CÓDIGO JAVA (showcase) =====
+// ===== SEÇÃO CÓDIGO JAVA  =====
 
 // Objeto (chave: valor) guardando o código de cada arquivo
 const cjTrechosDeCodigo = {
