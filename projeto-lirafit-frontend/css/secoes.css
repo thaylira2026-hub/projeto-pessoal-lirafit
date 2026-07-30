@@ -1,8 +1,9 @@
 /* ===== BASE DE TODAS AS SEÇÕES ===== */
 .secao {
     max-width: 1100px;
-    margin: 48px auto;
-    padding: 0 32px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 32px 32px;
 }
 
 .secao h2 {
@@ -321,6 +322,8 @@
 }
 
 /* ===== GALERIA DE ALIMENTOS ===== */
+/* ===== GALERIA DE ALIMENTOS ===== */
+
 .galeria-titulo {
     color: var(--cor-primaria-escura);
     margin: 32px 0 16px;
@@ -330,31 +333,31 @@
 
 .galeria-alimentos {
     display: flex;
-    gap: 16px;
+    justify-content: center;
+    gap: 20px;
     flex-wrap: wrap;
     grid-column: 1 / -1;
 }
 
 .card-alimento {
-    background-color: var(--cor-fundo-card);
-    border-radius: var(--raio-borda);
-    box-shadow: var(--sombra-card);
+    width: 250px;          /* altere para 220, 250 ou 300 */
+    border-radius: 16px;
     overflow: hidden;
-    width: 200px;
-    text-align: center;
+    background: white;
+    box-shadow: var(--sombra-card);
 }
 
 .card-alimento img {
     width: 100%;
-    height: 160px;
+    height: 300px;         /* todas as fotos ficam iguais */
     object-fit: cover;
+    display: block;
 }
 
 .card-alimento p {
     padding: 10px;
-    color: var(--cor-texto-suave);
+    text-align: center;
     font-weight: bold;
-    font-size: 0.9rem;
 }
 
 /* ===== TREINOS — DIA DE TREINO (MASSA) ===== */
@@ -475,4 +478,117 @@
     border-radius: var(--raio-borda);
     overflow: hidden;
     box-shadow: var(--sombra-card);
+}
+
+/* ===== SEÇÃO MEUS TREINOS ===== */
+
+#treinos {
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Container do Seletor de Objetivo (O card branco na imagem) */
+#objetivo-selector {
+    background-color: var(--cor-fundo-card, #ffffff);
+    border-radius: var(--raio-borda, 16px);
+    box-shadow: var(--sombra-card, 0 10px 30px rgba(0, 0, 0, 0.08));
+    padding: 60px 40px;      /* Aumenta bastante o espaço interno (cima/baixo) */
+    min-height: 380px;       /* Garante uma altura marcante no centro da tela */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    align-items: center;     /* Centraliza o conteúdo horizontalmente */
+    text-align: center;
+    margin-top: 24px;
+}
+
+/* Pergunta ("Qual é o seu objetivo?") */
+#objetivo-selector .secao-subtitulo {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--cor-texto, #333333);
+    margin-bottom: 32px;
+}
+
+/* Container dos Botões */
+.objetivo-botoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Estilo dos Botões (Emagrecer / Ganhar Massa / Condicionamento) */
+/* ---- Botões de Objetivo (Cards em Roxo) ---- */
+
+.btn-objetivo {
+    font-family: var(--fonte-principal);
+    font-size: 1.25rem;          /* Fonte maior para destaque */
+    font-weight: 600;
+    padding: 28px 36px;          /* Aumenta bastante a área do botão (altura x largura) */
+    min-width: 230px;            /* Deixa os botões bem mais largos */
+    min-height: 120px;           /* Transforma os botões em cards maiores */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border: 2px solid var(--cor-primaria, #8a5cf6);
+    border-radius: 16px;         /* Bordas mais arredondadas estilo card */
+    background-color: rgba(138, 92, 246, 0.05); /* Fundo roxo bem leve para preencher */
+    color: var(--cor-primaria, #8a5cf6);
+    
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 4px 12px rgba(138, 92, 246, 0.08);
+}
+
+.btn-objetivo:hover {
+    background-color: var(--cor-primaria, #8a5cf6);
+    color: #ffffff;
+    transform: translateY(-6px) scale(1.02); /* Efeito de elevação mais forte ao passar o mouse */
+    box-shadow: 0 12px 24px rgba(138, 92, 246, 0.25);
+}
+
+/* Espaçamento entre os cards */
+.objetivo-botoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;                  /* Aumenta a distância entre os cards */
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Responsive para celular */
+@media (max-width: 600px) {
+    #objetivo-selector {
+        padding: 40px 20px;
+        min-height: 300px;
+    }
+
+    .objetivo-botoes {
+        flex-direction: column;
+    }
+
+    .btn-objetivo {
+        width: 100%;
+    }
+}
+/* ---- Pergunta/Subtítulo do Seletor de Objetivos ---- */
+
+#objetivo-selector .secao-subtitulo,
+.secao-subtitulo {
+    font-family: var(--fonte-principal);
+    font-size: 1.4rem;                   /* Tamanho maior e bem visível */
+    font-weight: 700;                    /* Negrito marcado */
+    color: var(--cor-primaria-escura, #5b32a8); /* Roxo da identidade do site */
+    letter-spacing: 0.5px;               /* Leve espaçamento entre as letras */
+    margin-bottom: 32px;                 /* Dá um bom espaço até os cards */
+    text-align: center;
 }

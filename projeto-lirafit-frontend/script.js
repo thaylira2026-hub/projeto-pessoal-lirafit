@@ -88,7 +88,6 @@ formCadastro.addEventListener('submit', function(evento) {
         return;
     }
 
-    // Pega os usuários já salvos no localStorage (ou array vazio se não houver)
     const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
     // Verifica se o e-mail já está cadastrado
@@ -161,7 +160,7 @@ linksNav.forEach(function(link) {
 });
 
 
-// Treinos — dados e lógica
+// Treinos / dados e lógica
 const dadosTreinos = {
     emagrecer: {
         label: ' Emagrecer',
@@ -386,7 +385,7 @@ btnsAlim.forEach(function(btn) {
 });
 
 
-// Botão LiraBot
+// LiraBot
 const btnAcessarBot = document.getElementById('btn-acessar-bot');
 if (btnAcessarBot) {
     btnAcessarBot.addEventListener('click', function() {
@@ -460,7 +459,6 @@ btnTopo.addEventListener('click', function() {
 
 // ===== SEÇÃO CÓDIGO JAVA  =====
 
-// Objeto (chave: valor) guardando o código de cada arquivo
 const cjTrechosDeCodigo = {
     "Treinavel.java": `public interface Treinavel {
     void iniciarTreino();
