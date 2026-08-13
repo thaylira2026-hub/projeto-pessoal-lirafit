@@ -133,11 +133,11 @@ const dadosMassa = {
                     ]
                 },
                 {
-                    titulo: 'Lower B — Sexta: Posterior e Glúteo',
+                    titulo: 'Lower B — Sexta: Posterior',
                     exercicios: [
                         { nome: 'Levantamento Terra Romeno', series: '4 × 10 rep', descricao: 'Costas retas, máximo alongamento do posterior.' },
                         { nome: 'Cadeira Flexora', series: '4 × 12 rep', descricao: 'Foco total no bíceps femoral.' },
-                        { nome: 'Agachamento Búlgaro', series: '3 × 10 rep', descricao: 'Pé traseiro elevado, foco no glúteo e quadríceps.' },
+                        { nome: 'Agachamento Búlgaro', series: '3 × 10 rep', descricao: 'Pé traseiro elevado, foco no quadríceps.' },
                         { nome: 'Panturrilha Sentado', series: '4 × 20 rep', descricao: 'Foca no sóleo, movimento lento e controlado.' },
                     ]
                 }
@@ -253,7 +253,7 @@ const dadosMassa = {
                     titulo: 'Legs — Quarta: Pernas',
                     exercicios: [
                         { nome: 'Agachamento com Barra', series: '4 × 10 rep', descricao: 'Barra nos trapézios, profundidade total.' },
-                        { nome: 'Levantamento Terra Romeno', series: '4 × 10 rep', descricao: 'Foco no posterior e glúteo.' },
+                        { nome: 'Levantamento Terra Romeno', series: '4 × 10 rep', descricao: 'Foco no posterior.' },
                         { nome: 'Leg Press 45°', series: '4 × 12 rep', descricao: 'Amplitude total.' },
                         { nome: 'Afundo com Halteres', series: '3 × 12 rep', descricao: 'Alternado, passo longo.' },
                     ]
@@ -418,118 +418,124 @@ const dadosMassa = {
             ]
         },
         '4x': {
-            divisaoNome: 'Lower/Upper com foco em Glúteos — 4x por semana',
+            divisaoNome: 'Perna+Ombro / Costas+Bíceps / Glúteo+Posterior / Peito+Tríceps — 4x por semana',
             iniciante: [
                 {
-                    titulo: 'Lower A — Segunda: Glúteo',
+                    titulo: 'Treino A — Segunda: Perna, Ombro e Panturrilha',
                     exercicios: [
-                        { nome: 'Elevação Pélvica com Peso', series: '4 × 15 rep', descricao: 'Deitada no chão, eleva o quadril com controle.' },
-                        { nome: 'Agachamento Sumô com Halter', series: '3 × 15 rep', descricao: 'Pés bem afastados, foco no glúteo.' },
-                        { nome: 'Abdução na Máquina', series: '4 × 20 rep', descricao: 'Abre as pernas com controle, glúteo médio.' },
-                        { nome: 'Extensão de Quadril no Cabo', series: '3 × 15 rep', descricao: 'Em pé, chuta a perna para trás.' },
+                        { nome: 'Agachamento Livre', series: '3 × 15 rep', descricao: 'Pés na largura dos ombros, desça até 90° com o tronco firme.' },
+                        { nome: 'Leg Press', series: '3 × 15 rep', descricao: 'Pés na plataforma, amplitude total sem travar os joelhos no topo.' },
+                        { nome: 'Desenvolvimento com Halteres', series: '3 × 12 rep', descricao: 'Sentada, empurra os halteres acima da cabeça. Foco nos ombros.' },
+                        { nome: 'Elevação Lateral', series: '3 × 15 rep', descricao: 'Braços sobem lateralmente até a altura do ombro, cotovelos levemente flexionados.' },
+                        { nome: 'Panturrilha em Pé', series: '4 × 20 rep', descricao: 'Sobe na ponta do pé com controle e pausa de 1 segundo no topo.' },
                     ]
                 },
                 {
-                    titulo: 'Upper — Terça: Costas e Ombros',
+                    titulo: 'Treino B — Terça: Costas e Bíceps',
                     exercicios: [
-                        { nome: 'Remada com Halteres', series: '3 × 12 rep', descricao: 'Apoiada no banco, foco nas costas.' },
-                        { nome: 'Puxada na Polia', series: '3 × 12 rep', descricao: 'Puxe até o peito, cotovelos para baixo.' },
-                        { nome: 'Desenvolvimento com Halteres', series: '3 × 12 rep', descricao: 'Sentada, empurra acima da cabeça.' },
-                        { nome: 'Elevação Lateral', series: '3 × 15 rep', descricao: 'Amplitude controlada até o ombro.' },
+                        { nome: 'Puxada na Polia', series: '3 × 12 rep', descricao: 'Puxe a barra até o peito, cotovelos apontando para baixo e para trás.' },
+                        { nome: 'Remada com Halteres', series: '3 × 12 rep', descricao: 'Apoiada no banco, puxe o halter até o quadril com amplitude máxima.' },
+                        { nome: 'Remada Baixa no Cabo', series: '3 × 12 rep', descricao: 'Sentada, puxe o cabo até o abdômen mantendo as costas eretas.' },
+                        { nome: 'Rosca Direta', series: '3 × 12 rep', descricao: 'Cotovelos fixos ao lado do corpo, sobe o halter até o ombro com controle.' },
+                        { nome: 'Rosca Martelo', series: '3 × 12 rep', descricao: 'Pegada neutra, foco no braquial e no antebraço.' },
                     ]
                 },
                 {
-                    titulo: 'Lower B — Quinta: Quadríceps',
+                    titulo: 'Treino C — Quinta: Glúteo e Posterior',
                     exercicios: [
-                        { nome: 'Agachamento Livre', series: '3 × 15 rep', descricao: 'Pés na largura dos ombros, 90°.' },
-                        { nome: 'Leg Press', series: '3 × 15 rep', descricao: 'Amplitude total, foco no quadríceps.' },
-                        { nome: 'Cadeira Extensora', series: '3 × 15 rep', descricao: 'Extensão completa da perna.' },
-                        { nome: 'Afundo com Halteres', series: '3 × 12 rep', descricao: 'Passo à frente, joelho quase no chão.' },
+                        { nome: 'Elevação Pélvica com Peso', series: '3 × 15 rep', descricao: 'Deitada, costas apoiadas, eleva o quadril contraindo bem o glúteo no topo.' },
+                        { nome: 'Stiff com Halteres', series: '3 × 12 rep', descricao: 'Costas retas, desce os halteres pela perna até sentir o alongamento no posterior.' },
+                        { nome: 'Abdução no Cabo', series: '3 × 20 rep', descricao: 'Em pé, eleva a perna lateralmente contra a resistência. Foco no glúteo médio.' },
+                        { nome: 'Cadeira Flexora', series: '3 × 15 rep', descricao: 'Foco no bíceps femoral, movimento controlado sem impulso.' },
                     ]
                 },
                 {
-                    titulo: 'Full Body — Sexta: Corpo Todo',
+                    titulo: 'Treino D — Sexta: Peito e Tríceps',
                     exercicios: [
-                        { nome: 'Stiff com Halteres', series: '3 × 12 rep', descricao: 'Alonga o posterior e glúteo.' },
-                        { nome: 'Supino com Halteres', series: '3 × 12 rep', descricao: 'Amplitude completa, peitoral.' },
-                        { nome: 'Rosca Direta', series: '3 × 12 rep', descricao: 'Cotovelos fixos, bíceps.' },
-                        { nome: 'Tríceps Corda', series: '3 × 15 rep', descricao: 'Extensão completa.' },
+                        { nome: 'Supino com Halteres', series: '3 × 12 rep', descricao: 'Deitada, empurra os halteres para cima em linha reta. Foco no peitoral.' },
+                        { nome: 'Crucifixo com Halteres', series: '3 × 15 rep', descricao: 'Abre os braços lateralmente com leve flexão nos cotovelos, foco no peitoral.' },
+                        { nome: 'Tríceps Corda', series: '3 × 15 rep', descricao: 'Cotovelos fixos ao lado do corpo, estende os braços para baixo completamente.' },
+                        { nome: 'Tríceps Testa', series: '3 × 12 rep', descricao: 'Deitada, desce o halter em direção à testa e estende de volta.' },
                     ]
                 }
             ],
             intermediario: [
                 {
-                    titulo: 'Lower A — Segunda: Glúteo e Posterior',
+                    titulo: 'Treino A — Segunda: Perna, Ombro e Panturrilha',
                     exercicios: [
-                        { nome: 'Hip Thrust com Barra', series: '4 × 15 rep', descricao: 'Costas no banco, carga no quadril.' },
-                        { nome: 'Stiff com Barra', series: '4 × 10 rep', descricao: 'Costas retas, máximo alongamento.' },
-                        { nome: 'Abdução com Caneleira no Cabo', series: '4 × 20 rep', descricao: 'Glúteo médio, movimento controlado.' },
-                        { nome: 'Cadeira Flexora', series: '3 × 15 rep', descricao: 'Bíceps femoral.' },
+                        { nome: 'Agachamento com Barra', series: '4 × 12 rep', descricao: 'Barra nos trapézios, desça controlado até 90° e suba expirando.' },
+                        { nome: 'Leg Press 45°', series: '4 × 15 rep', descricao: 'Pés na largura dos ombros, amplitude total na descida.' },
+                        { nome: 'Desenvolvimento Militar', series: '4 × 10 rep', descricao: 'Barra ou halteres na frente do rosto, empurra explosivo acima da cabeça.' },
+                        { nome: 'Elevação Lateral com Cabos', series: '3 × 15 rep', descricao: 'Tensão constante no deltóide lateral do início ao fim do movimento.' },
+                        { nome: 'Panturrilha Sentada', series: '4 × 20 rep', descricao: 'Foco no sóleo, movimento lento com pausa no alongamento.' },
                     ]
                 },
                 {
-                    titulo: 'Upper — Terça: Costas e Ombros',
+                    titulo: 'Treino B — Terça: Costas e Bíceps',
                     exercicios: [
-                        { nome: 'Puxada Pegada Fechada', series: '4 × 10 rep', descricao: 'Foco na parte baixa das costas.' },
-                        { nome: 'Remada com Barra', series: '4 × 10 rep', descricao: 'Torso a 45°, puxe até o abdômen.' },
-                        { nome: 'Desenvolvimento Militar', series: '3 × 10 rep', descricao: 'Barra na frente, foco nos ombros.' },
-                        { nome: 'Elevação Lateral com Cabos', series: '3 × 15 rep', descricao: 'Tensão constante.' },
+                        { nome: 'Puxada Pegada Fechada', series: '4 × 10 rep', descricao: 'Pegada supinada, foco na parte baixa e na largura das costas.' },
+                        { nome: 'Remada com Barra', series: '4 × 10 rep', descricao: 'Torso inclinado a 45°, puxe a barra até o abdômen sem balançar o corpo.' },
+                        { nome: 'Remada Unilateral', series: '3 × 12 rep', descricao: 'Apoiada no banco, amplitude máxima puxando o cotovelo para trás.' },
+                        { nome: 'Rosca Scott', series: '4 × 12 rep', descricao: 'Apoio no banco Scott isola completamente o bíceps.' },
+                        { nome: 'Rosca Concentrada', series: '3 × 12 rep', descricao: 'Cotovelo apoiado na coxa, foco no pico de contração do bíceps.' },
                     ]
                 },
                 {
-                    titulo: 'Lower B — Quinta: Quadríceps e Glúteo',
+                    titulo: 'Treino C — Quinta: Glúteo e Posterior',
                     exercicios: [
-                        { nome: 'Agachamento com Barra', series: '4 × 12 rep', descricao: 'Barra nos trapézios, profundidade total.' },
-                        { nome: 'Leg Press', series: '4 × 15 rep', descricao: 'Amplitude total.' },
-                        { nome: 'Agachamento Búlgaro', series: '3 × 12 rep', descricao: 'Pé traseiro elevado, glúteo e quadríceps.' },
-                        { nome: 'Panturrilha Sentada', series: '4 × 20 rep', descricao: 'Foco no sóleo.' },
+                        { nome: 'Hip Thrust com Barra', series: '4 × 15 rep', descricao: 'Costas apoiadas no banco, sobe o quadril com força contraindo o glúteo.' },
+                        { nome: 'Stiff com Barra', series: '4 × 10 rep', descricao: 'Costas retas, máximo alongamento do posterior antes de subir.' },
+                        { nome: 'Abdução com Caneleira no Cabo', series: '4 × 20 rep', descricao: 'Movimento controlado, foco total no glúteo médio.' },
+                        { nome: 'Cadeira Flexora', series: '4 × 15 rep', descricao: 'Foco total no bíceps femoral, sem impulso.' },
                     ]
                 },
                 {
-                    titulo: 'Full Body — Sexta: Braços e Core',
+                    titulo: 'Treino D — Sexta: Peito e Tríceps',
                     exercicios: [
-                        { nome: 'Supino Inclinado com Halteres', series: '3 × 12 rep', descricao: 'Peitoral superior.' },
-                        { nome: 'Rosca Scott', series: '3 × 12 rep', descricao: 'Isolamento total do bíceps.' },
-                        { nome: 'Tríceps Francês', series: '3 × 12 rep', descricao: 'Amplitude completa.' },
-                        { nome: 'Prancha Abdominal', series: '3 × 45 seg', descricao: 'Core, corpo reto do calcanhar à cabeça.' },
+                        { nome: 'Supino Inclinado com Halteres', series: '4 × 10 rep', descricao: 'Banco a 45°, foca na parte superior do peitoral.' },
+                        { nome: 'Crucifixo com Cabos', series: '3 × 12 rep', descricao: 'Tensão constante no peitoral do início ao fim do movimento.' },
+                        { nome: 'Tríceps Francês', series: '4 × 10 rep', descricao: 'Deitada, desce o halter atrás da cabeça e estende completamente.' },
+                        { nome: 'Tríceps Pulley', series: '3 × 12 rep', descricao: 'Cotovelos fixos, extensão completa até travar levemente o braço.' },
                     ]
                 }
             ],
             avancado: [
                 {
-                    titulo: 'Lower A — Segunda: Glúteo (Força)',
+                    titulo: 'Treino A — Segunda: Perna, Ombro e Panturrilha (Força)',
                     exercicios: [
-                        { nome: 'Hip Thrust com Barra', series: '5 × 12 rep', descricao: 'Carga máxima, explosão.' },
-                        { nome: 'Levantamento Terra Romeno', series: '4 × 8 rep', descricao: 'Carga pesada, máximo alongamento.' },
-                        { nome: 'Agachamento Sumô com Barra', series: '4 × 10 rep', descricao: 'Carga pesada, glúteo e interno da coxa.' },
-                        { nome: 'Extensão de Quadril com Caneleira Pesada', series: '4 × 20 rep', descricao: 'Volume alto no glúteo.' },
+                        { nome: 'Agachamento com Barra', series: '5 × 8 rep', descricao: 'Carga pesada, profundidade total mantendo a coluna neutra.' },
+                        { nome: 'Leg Press com Carga Máxima', series: '4 × 10 rep', descricao: 'Volume e intensidade altos, amplitude total.' },
+                        { nome: 'Desenvolvimento com Barra', series: '4 × 8 rep', descricao: 'Carga pesada, empurra explosivo acima da cabeça.' },
+                        { nome: 'Elevação Lateral Mio-Rep', series: '3 × 20 rep', descricao: 'Volume máximo no deltóide lateral, sem descanso entre as séries.' },
+                        { nome: 'Panturrilha com Carga Máxima', series: '5 × 15 rep', descricao: 'Amplitude total, pausa no alongamento e explosão na subida.' },
                     ]
                 },
                 {
-                    titulo: 'Upper — Terça: Costas e Ombros (Força)',
+                    titulo: 'Treino B — Terça: Costas e Bíceps (Força)',
                     exercicios: [
-                        { nome: 'Barra Fixa', series: '4 × 8 rep', descricao: 'Queixo acima da barra, amplitude total.' },
-                        { nome: 'Levantamento Terra', series: '4 × 6 rep', descricao: 'Carga máxima, técnica impecável.' },
-                        { nome: 'Desenvolvimento com Barra', series: '4 × 8 rep', descricao: 'Carga pesada.' },
-                        { nome: 'Elevação Lateral Mio-Rep', series: '3 × 20 rep', descricao: 'Volume máximo.' },
+                        { nome: 'Barra Fixa', series: '4 × 8 rep', descricao: 'Queixo acima da barra, amplitude total do início ao fim.' },
+                        { nome: 'Remada Unilateral com Halter', series: '4 × 10 rep', descricao: 'Carga pesada, amplitude máxima puxando até o quadril.' },
+                        { nome: 'Puxada Pegada Supinada', series: '4 × 8 rep', descricao: 'Foco na parte baixa das costas e no bíceps.' },
+                        { nome: 'Rosca com Barra', series: '4 × 8 rep', descricao: 'Carga pesada, cotovelos fixos ao lado do corpo.' },
+                        { nome: 'Rosca Spider', series: '3 × 15 rep', descricao: 'Apoiada no banco inclinado, pico de contração máximo no bíceps.' },
                     ]
                 },
                 {
-                    titulo: 'Lower B — Quinta: Quadríceps (Força)',
+                    titulo: 'Treino C — Quinta: Glúteo e Posterior (Força)',
                     exercicios: [
-                        { nome: 'Agachamento com Barra', series: '5 × 8 rep', descricao: 'Carga pesada, profundidade total.' },
-                        { nome: 'Leg Press com Carga Máxima', series: '4 × 10 rep', descricao: 'Volume e intensidade.' },
-                        { nome: 'Agachamento Búlgaro', series: '4 × 8 rep', descricao: 'Carga pesada.' },
-                        { nome: 'Panturrilha com Carga Máxima', series: '5 × 15 rep', descricao: 'Amplitude total.' },
+                        { nome: 'Hip Thrust com Barra', series: '5 × 12 rep', descricao: 'Carga máxima, explosão total na subida do quadril.' },
+                        { nome: 'Levantamento Terra Romeno', series: '4 × 8 rep', descricao: 'Carga pesada, máximo alongamento do posterior mantendo as costas retas.' },
+                        { nome: 'Agachamento Sumô com Barra', series: '4 × 10 rep', descricao: 'Pés bem afastados, carga pesada, foco no glúteo e interno da coxa.' },
+                        { nome: 'Cadeira Flexora Unilateral', series: '4 × 15 rep', descricao: 'Isolamento total do bíceps femoral, uma perna por vez.' },
                     ]
                 },
                 {
-                    titulo: 'Full Body — Sexta: Corpo Todo (Volume)',
+                    titulo: 'Treino D — Sexta: Peito e Tríceps (Força)',
                     exercicios: [
-                        { nome: 'Supino com Barra', series: '4 × 8 rep', descricao: 'Carga pesada.' },
-                        { nome: 'Hip Thrust com Barra', series: '4 × 15 rep', descricao: 'Volume extra no glúteo.' },
-                        { nome: 'Rosca com Barra', series: '4 × 8 rep', descricao: 'Carga pesada.' },
-                        { nome: 'Prancha + Elevação de Quadril', series: '3 × 20 rep', descricao: 'Core e glúteo simultâneos.' },
+                        { nome: 'Supino Reto com Barra', series: '5 × 8 rep', descricao: 'Carga pesada, desça controlado até o peito.' },
+                        { nome: 'Supino Inclinado com Halteres', series: '4 × 10 rep', descricao: 'Banco a 45°, volume alto na parte superior do peitoral.' },
+                        { nome: 'Tríceps com Correntes', series: '4 × 8 rep', descricao: 'Resistência crescente conforme o braço estende.' },
+                        { nome: 'Tríceps Testa com Barra', series: '3 × 12 rep', descricao: 'Deitada, movimento controlado até travar levemente o cotovelo.' },
                     ]
                 }
             ]
