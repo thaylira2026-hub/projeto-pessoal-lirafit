@@ -398,6 +398,16 @@ if (btnAcessarBot) {
     });
 }
 
+// Botão flutuante para fechar o LiraBot (fallback mobile)
+const btnFecharBot = document.createElement('button');
+btnFecharBot.id = 'btn-fechar-lirabot';
+btnFecharBot.textContent = '✕ Fechar assistente';
+btnFecharBot.classList.add('escondido');
+document.body.appendChild(btnFecharBot);
+
+btnFecharBot.addEventListener('click', function () {
+    if (window.liraBotInstance) window.liraBotInstance.toggleOpen();
+});
 
 // Botão "← Início"
 btnInicio.addEventListener('click', function() {

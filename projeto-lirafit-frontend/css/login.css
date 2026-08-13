@@ -328,3 +328,17 @@
     font-size: 0.9rem;
     font-weight: bold;
 }
+
+#btn-fechar-lirabot {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    z-index: 2147483647; 
+    background: var(--roxo, #6B4E8E);
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
