@@ -393,7 +393,7 @@ if (btnAcessarBot) {
         if (url) {
             window.open(url, '_blank');
         } else {
-            alert('Cole o link do LiraBot antes de acessar.');
+            alert('.');
         }
     });
 }

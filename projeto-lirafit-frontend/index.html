@@ -318,7 +318,8 @@
         </section>
 
         <!-- ===== SEÇÃO ASSISTENTE ===== -->
-        <section id="assistente" class="secao escondido">
+        
+                <section id="assistente" class="secao escondido">
             <h2>Assistente Virtual</h2>
 
             <div class="assistente-container">
@@ -326,12 +327,15 @@
                     <img src="assets/lirabot.svg" alt="LiraBot" class="assistente-foto">
                     <div>
                         <p class="assistente-nome">LiraBot</p>
-                        <p class="assistente-descricao">Olá! Sou o LiraBot, assistente do Lira Fit. Peça dados e dicas atualizadas clicando no icone azul no canto inferior abaixo!</p>
+                        <p class="assistente-descricao">Olá! Sou o LiraBot, assistente virtual da Thays. Tire suas dúvidas sobre treino e alimentação!</p>
                     </div>
                 </div>
 
-                <div id="watson-chat-container"></div>
+                <div class="assistente-link-container">
+                    <button id="btn-acessar-bot">Acessar o LiraBot clicando no botão inferior azul</button>
+                </div>
             </div>
+        </section>
         </section>
 
         <!-- ===== SEÇÃO CÓDIGO JAVA ===== -->
@@ -387,23 +391,18 @@
 
     <script>
       window.watsonAssistantChatOptions = {
-        integrationID: "4baf8be1-6d2c-46f7-bf72-d570dea1bd47",
-        region: "https://integrations.au-syd.assistant.watson.appdomain.cloud",
-        serviceInstanceID: "c79fa574-4c94-4674-b092-19c3aefbde6c",
-        element: document.getElementById('watson-chat-container'),
-        onLoad: async (instance) => {
-          await instance.render();
-          window.liraBotInstance = instance;
-          const btn = document.getElementById('btn-fechar-lirabot');
-          instance.on({ type: 'window:open', handler: () => btn.classList.remove('escondido') });
-          instance.on({ type: 'window:close', handler: () => btn.classList.add('escondido') });
-        }
+         integrationID: "4baf8be1-6d2c-46f7-bf72-d570dea1bd47", 
+        region: "https://integrations.au-syd.assistant.watson.appdomain.cloud", 
+        serviceInstanceID: "c79fa574-4c94-4674-b092-19c3aefbde6c", 
+        element: document.getElementById('watson-chat-container'), 
+        onLoad: async (instance) => { await instance.render(); }
       };
       setTimeout(function(){
-        const t = document.createElement('script');
-        t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
         document.head.appendChild(t);
       });
+
     </script>
 </body>
 </html>
